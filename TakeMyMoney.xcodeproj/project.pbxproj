@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B18FAEA9245AE57700193D5E /* PaymentDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18FAEA8245AE57700193D5E /* PaymentDataTableViewController.swift */; };
+		B189569E245CE6C3003E1BBF /* PaymentConfirmationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189569D245CE6C3003E1BBF /* PaymentConfirmationTVC.swift */; };
+		B18956A3245D016C003E1BBF /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18956A2245D016C003E1BBF /* RoundedButton.swift */; };
+		B18FAEA9245AE57700193D5E /* PaymentDataTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18FAEA8245AE57700193D5E /* PaymentDataTVC.swift */; };
 		B18FAEAD245BA41D00193D5E /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18FAEAC245BA41C00193D5E /* PaymentMethod.swift */; };
 		B1B11B40245A5EF100DFAEF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B11B3F245A5EF100DFAEF2 /* AppDelegate.swift */; };
 		B1B11B42245A5EF100DFAEF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B11B41245A5EF100DFAEF2 /* SceneDelegate.swift */; };
@@ -17,7 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B18FAEA8245AE57700193D5E /* PaymentDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDataTableViewController.swift; sourceTree = "<group>"; };
+		B189569D245CE6C3003E1BBF /* PaymentConfirmationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentConfirmationTVC.swift; sourceTree = "<group>"; };
+		B18956A2245D016C003E1BBF /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		B18FAEA8245AE57700193D5E /* PaymentDataTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDataTVC.swift; sourceTree = "<group>"; };
 		B18FAEAC245BA41C00193D5E /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
 		B1B11B3C245A5EF100DFAEF2 /* TakeMyMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeMyMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B11B3F245A5EF100DFAEF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,9 +43,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B18956A5245D0186003E1BBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B18956A2245D016C003E1BBF /* RoundedButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B18FAEAA245AE57E00193D5E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B189569D245CE6C3003E1BBF /* PaymentConfirmationTVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -78,10 +91,11 @@
 				B1B11B3F245A5EF100DFAEF2 /* AppDelegate.swift */,
 				B1B11B41245A5EF100DFAEF2 /* SceneDelegate.swift */,
 				B1B11B45245A5EF100DFAEF2 /* Main.storyboard */,
+				B18956A5245D0186003E1BBF /* Views */,
 				B1B11B48245A5EF200DFAEF2 /* Assets.xcassets */,
 				B1B11B4A245A5EF200DFAEF2 /* LaunchScreen.storyboard */,
 				B1B11B4D245A5EF200DFAEF2 /* Info.plist */,
-				B18FAEA8245AE57700193D5E /* PaymentDataTableViewController.swift */,
+				B18FAEA8245AE57700193D5E /* PaymentDataTVC.swift */,
 			);
 			path = TakeMyMoney;
 			sourceTree = "<group>";
@@ -157,9 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B189569E245CE6C3003E1BBF /* PaymentConfirmationTVC.swift in Sources */,
+				B18956A3245D016C003E1BBF /* RoundedButton.swift in Sources */,
 				B1B11B40245A5EF100DFAEF2 /* AppDelegate.swift in Sources */,
 				B18FAEAD245BA41D00193D5E /* PaymentMethod.swift in Sources */,
-				B18FAEA9245AE57700193D5E /* PaymentDataTableViewController.swift in Sources */,
+				B18FAEA9245AE57700193D5E /* PaymentDataTVC.swift in Sources */,
 				B1B11B42245A5EF100DFAEF2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

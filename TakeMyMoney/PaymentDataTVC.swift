@@ -13,7 +13,7 @@ enum RowAction: Int {
     case show = 44
 }
 
-class PaymentDataTableViewController: UITableViewController {
+class PaymentDataTVC: UITableViewController {
     
     //MARK: - Properties
     
