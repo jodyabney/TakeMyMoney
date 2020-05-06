@@ -34,7 +34,7 @@ enum CreditCardCVVDigitCount: Int {
 enum CreditCardLogo: String {
     case amex = "icons8-american-express-144.png"
     case discover = "icons8-discover-144.png"
-    case mastercard = "icons8-mastercard-144.png"
+    case mastercard = "icons8-mastercard-logo-144.png"
     case visa = "icons8-visa-144.png"
 }
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B1192196245DF6A300BD15AE /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1192195245DF6A300BD15AE /* CreditCard.swift */; };
 		B12052642462D68200ABDFDD /* PaymentConfirmationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12052632462D68200ABDFDD /* PaymentConfirmationTVC.swift */; };
+		B12052662463756300ABDFDD /* PaymentMethodSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12052652463756300ABDFDD /* PaymentMethodSegmentedControl.swift */; };
 		B18956A3245D016C003E1BBF /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18956A2245D016C003E1BBF /* RoundedButton.swift */; };
 		B18FAEA9245AE57700193D5E /* PaymentDataTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18FAEA8245AE57700193D5E /* PaymentDataTVC.swift */; };
 		B18FAEAD245BA41D00193D5E /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18FAEAC245BA41C00193D5E /* PaymentMethod.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		B1192195245DF6A300BD15AE /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		B12052632462D68200ABDFDD /* PaymentConfirmationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentConfirmationTVC.swift; sourceTree = "<group>"; };
+		B12052652463756300ABDFDD /* PaymentMethodSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodSegmentedControl.swift; sourceTree = "<group>"; };
 		B18956A2245D016C003E1BBF /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		B18FAEA8245AE57700193D5E /* PaymentDataTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDataTVC.swift; sourceTree = "<group>"; };
 		B18FAEAC245BA41C00193D5E /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				B1B11B4A245A5EF200DFAEF2 /* LaunchScreen.storyboard */,
 				B18956A2245D016C003E1BBF /* RoundedButton.swift */,
 				B1906532245FADDF00041405 /* MonthYearPickerView.swift */,
+				B12052652463756300ABDFDD /* PaymentMethodSegmentedControl.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				B1BF6AB4245E523900AE3E0C /* Validations.swift in Sources */,
 				B1BF6ABA245E689300AE3E0C /* CardCVV.swift in Sources */,
 				B18FAEAD245BA41D00193D5E /* PaymentMethod.swift in Sources */,
+				B12052662463756300ABDFDD /* PaymentMethodSegmentedControl.swift in Sources */,
 				B1BF6ABC245E6D2500AE3E0C /* CardNumber.swift in Sources */,
 				B18FAEA9245AE57700193D5E /* PaymentDataTVC.swift in Sources */,
 				B1906557245FB6CE00041405 /* CardValidUntil.swift in Sources */,

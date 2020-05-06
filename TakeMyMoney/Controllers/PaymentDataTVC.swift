@@ -133,14 +133,8 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // set up the Payment Method Segmented Control Appearance
-        let attributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)
-        ]
-        paymentMethodControl.setTitleTextAttributes(attributes, for: .selected)
-        paymentMethodControl.setTitleTextAttributes(attributes, for: .normal)
-        
+
+        // set initial value for payment type
         paymentTypeLabel.text = selectedPaymentMethod.rawValue
         
         // set TextField Delegates
@@ -211,7 +205,6 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
     //MARK: - Instance Methods
     
     func updatePaymentMethodView() {
-        
         switch selectedPaymentMethod {
         case .payPal:
             paymentTypeLabel.text = selectedPaymentMethod.rawValue
@@ -225,13 +218,13 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
         guard let cardNumber = cardNumberText.text else { return }
         
         switch cardNumber.first {
-        case "4": // Visa cards start with a 4
-            cardType = .visa
-            cardLogo = CreditCardLogo.visa.rawValue
-            creditCardLogo.image = UIImage(named: cardLogo!)
         case "3": // AMEX cards start with a 3
             cardType = .amex
             cardLogo = CreditCardLogo.amex.rawValue
+            creditCardLogo.image = UIImage(named: cardLogo!)
+        case "4": // Visa cards start with a 4
+            cardType = .visa
+            cardLogo = CreditCardLogo.visa.rawValue
             creditCardLogo.image = UIImage(named: cardLogo!)
         case "5": // Mastercards cards start with a 5
             cardType = .mastercard
@@ -376,11 +369,7 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
     @IBAction func saveCardDataValueChanged(_ sender: UISwitch) {
         saveCardData = sender.isOn
     }
-    
-    @IBAction func proceedButtonTapped(_ sender: UIButton) {
-        }
 
-    
     
     //MARK: - TableView Delegate Methods
     
@@ -550,6 +539,22 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case paypalEmailText:
+            paypalPasswordText.becomeFirstResponder()
+        case paypalPasswordText:
+            proceedButton.becomeFirstResponder()
+        case cardNumberText:
+            validUntilText.becomeFirstResponder()
+        case validUntilText:
+            cvvText.becomeFirstResponder()
+        case cvvText:
+            cardHolderText.becomeFirstResponder()
+        case cardHolderText:
+            proceedButton.becomeFirstResponder()
+        default:
+            break
+        }
         textField.resignFirstResponder()
         return true
     }
