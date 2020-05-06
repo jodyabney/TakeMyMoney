@@ -7,22 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1192196245DF6A300BD15AE /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1192195245DF6A300BD15AE /* CreditCard.swift */; };
 		B189569E245CE6C3003E1BBF /* PaymentConfirmationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189569D245CE6C3003E1BBF /* PaymentConfirmationTVC.swift */; };
 		B18956A3245D016C003E1BBF /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18956A2245D016C003E1BBF /* RoundedButton.swift */; };
 		B18FAEA9245AE57700193D5E /* PaymentDataTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18FAEA8245AE57700193D5E /* PaymentDataTVC.swift */; };
 		B18FAEAD245BA41D00193D5E /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18FAEAC245BA41C00193D5E /* PaymentMethod.swift */; };
+		B1906533245FADDF00041405 /* MonthYearPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1906532245FADDF00041405 /* MonthYearPickerView.swift */; };
+		B1906557245FB6CE00041405 /* CardValidUntil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1906556245FB6CD00041405 /* CardValidUntil.swift */; };
 		B1B11B40245A5EF100DFAEF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B11B3F245A5EF100DFAEF2 /* AppDelegate.swift */; };
 		B1B11B42245A5EF100DFAEF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B11B41245A5EF100DFAEF2 /* SceneDelegate.swift */; };
 		B1B11B47245A5EF100DFAEF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B11B45245A5EF100DFAEF2 /* Main.storyboard */; };
 		B1B11B49245A5EF200DFAEF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1B11B48245A5EF200DFAEF2 /* Assets.xcassets */; };
 		B1B11B4C245A5EF200DFAEF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B11B4A245A5EF200DFAEF2 /* LaunchScreen.storyboard */; };
+		B1BF6AB2245E520600AE3E0C /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF6AB1245E520600AE3E0C /* Email.swift */; };
+		B1BF6AB4245E523900AE3E0C /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF6AB3245E523900AE3E0C /* Validations.swift */; };
+		B1BF6AB6245E578500AE3E0C /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF6AB5245E578500AE3E0C /* Password.swift */; };
+		B1BF6AB8245E586300AE3E0C /* CardHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF6AB7245E586300AE3E0C /* CardHolder.swift */; };
+		B1BF6ABA245E689300AE3E0C /* CardCVV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF6AB9245E689300AE3E0C /* CardCVV.swift */; };
+		B1BF6ABC245E6D2500AE3E0C /* CardNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF6ABB245E6D2500AE3E0C /* CardNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B1192195245DF6A300BD15AE /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		B189569D245CE6C3003E1BBF /* PaymentConfirmationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentConfirmationTVC.swift; sourceTree = "<group>"; };
 		B18956A2245D016C003E1BBF /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		B18FAEA8245AE57700193D5E /* PaymentDataTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDataTVC.swift; sourceTree = "<group>"; };
 		B18FAEAC245BA41C00193D5E /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
+		B1906532245FADDF00041405 /* MonthYearPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYearPickerView.swift; sourceTree = "<group>"; };
+		B1906556245FB6CD00041405 /* CardValidUntil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValidUntil.swift; sourceTree = "<group>"; };
 		B1B11B3C245A5EF100DFAEF2 /* TakeMyMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeMyMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B11B3F245A5EF100DFAEF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1B11B41245A5EF100DFAEF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +42,12 @@
 		B1B11B48245A5EF200DFAEF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1B11B4B245A5EF200DFAEF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1B11B4D245A5EF200DFAEF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1BF6AB1245E520600AE3E0C /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
+		B1BF6AB3245E523900AE3E0C /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
+		B1BF6AB5245E578500AE3E0C /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
+		B1BF6AB7245E586300AE3E0C /* CardHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHolder.swift; sourceTree = "<group>"; };
+		B1BF6AB9245E689300AE3E0C /* CardCVV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCVV.swift; sourceTree = "<group>"; };
+		B1BF6ABB245E6D2500AE3E0C /* CardNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNumber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +64,10 @@
 		B18956A5245D0186003E1BBF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B1B11B45245A5EF100DFAEF2 /* Main.storyboard */,
+				B1B11B4A245A5EF200DFAEF2 /* LaunchScreen.storyboard */,
 				B18956A2245D016C003E1BBF /* RoundedButton.swift */,
+				B1906532245FADDF00041405 /* MonthYearPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -55,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				B189569D245CE6C3003E1BBF /* PaymentConfirmationTVC.swift */,
+				B18FAEA8245AE57700193D5E /* PaymentDataTVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -63,6 +85,14 @@
 			isa = PBXGroup;
 			children = (
 				B18FAEAC245BA41C00193D5E /* PaymentMethod.swift */,
+				B1192195245DF6A300BD15AE /* CreditCard.swift */,
+				B1BF6AB1245E520600AE3E0C /* Email.swift */,
+				B1BF6AB5245E578500AE3E0C /* Password.swift */,
+				B1BF6AB7245E586300AE3E0C /* CardHolder.swift */,
+				B1BF6AB9245E689300AE3E0C /* CardCVV.swift */,
+				B1BF6ABB245E6D2500AE3E0C /* CardNumber.swift */,
+				B1906556245FB6CD00041405 /* CardValidUntil.swift */,
+				B1BF6AB3245E523900AE3E0C /* Validations.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -70,8 +100,8 @@
 		B1B11B33245A5EF100DFAEF2 = {
 			isa = PBXGroup;
 			children = (
-				B1B11B3E245A5EF100DFAEF2 /* TakeMyMoney */,
 				B1B11B3D245A5EF100DFAEF2 /* Products */,
+				B1B11B3E245A5EF100DFAEF2 /* TakeMyMoney */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,18 +116,23 @@
 		B1B11B3E245A5EF100DFAEF2 /* TakeMyMoney */ = {
 			isa = PBXGroup;
 			children = (
-				B18FAEAB245BA40D00193D5E /* Models */,
-				B18FAEAA245AE57E00193D5E /* Controllers */,
-				B1B11B3F245A5EF100DFAEF2 /* AppDelegate.swift */,
-				B1B11B41245A5EF100DFAEF2 /* SceneDelegate.swift */,
-				B1B11B45245A5EF100DFAEF2 /* Main.storyboard */,
-				B18956A5245D0186003E1BBF /* Views */,
+				B1D3236524625503007B60DA /* App-Scene Delegates */,
 				B1B11B48245A5EF200DFAEF2 /* Assets.xcassets */,
-				B1B11B4A245A5EF200DFAEF2 /* LaunchScreen.storyboard */,
+				B18FAEAA245AE57E00193D5E /* Controllers */,
 				B1B11B4D245A5EF200DFAEF2 /* Info.plist */,
-				B18FAEA8245AE57700193D5E /* PaymentDataTVC.swift */,
+				B18FAEAB245BA40D00193D5E /* Models */,
+				B18956A5245D0186003E1BBF /* Views */,
 			);
 			path = TakeMyMoney;
+			sourceTree = "<group>";
+		};
+		B1D3236524625503007B60DA /* App-Scene Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				B1B11B3F245A5EF100DFAEF2 /* AppDelegate.swift */,
+				B1B11B41245A5EF100DFAEF2 /* SceneDelegate.swift */,
+			);
+			path = "App-Scene Delegates";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,11 +206,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1906533245FADDF00041405 /* MonthYearPickerView.swift in Sources */,
 				B189569E245CE6C3003E1BBF /* PaymentConfirmationTVC.swift in Sources */,
 				B18956A3245D016C003E1BBF /* RoundedButton.swift in Sources */,
+				B1192196245DF6A300BD15AE /* CreditCard.swift in Sources */,
 				B1B11B40245A5EF100DFAEF2 /* AppDelegate.swift in Sources */,
+				B1BF6AB4245E523900AE3E0C /* Validations.swift in Sources */,
+				B1BF6ABA245E689300AE3E0C /* CardCVV.swift in Sources */,
 				B18FAEAD245BA41D00193D5E /* PaymentMethod.swift in Sources */,
+				B1BF6ABC245E6D2500AE3E0C /* CardNumber.swift in Sources */,
 				B18FAEA9245AE57700193D5E /* PaymentDataTVC.swift in Sources */,
+				B1906557245FB6CE00041405 /* CardValidUntil.swift in Sources */,
+				B1BF6AB8245E586300AE3E0C /* CardHolder.swift in Sources */,
+				B1BF6AB2245E520600AE3E0C /* Email.swift in Sources */,
+				B1BF6AB6245E578500AE3E0C /* Password.swift in Sources */,
 				B1B11B42245A5EF100DFAEF2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

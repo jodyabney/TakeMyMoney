@@ -10,7 +10,7 @@
         <scene sceneID="Ju2-sx-3Cj">
             <objects>
                 <tableViewController id="ggI-a2-XLD" customClass="PaymentDataTVC" customModule="TakeMyMoney" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tq4-pd-txz">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tq4-pd-txz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -125,7 +125,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sI3-9h-Fx5">
-                                                    <rect key="frame" x="20" y="20" width="102" height="24"/>
+                                                    <rect key="frame" x="20" y="20" width="101.5" height="24"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -139,42 +139,75 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gc6-cu-E65" userLabel="PayPal Email Cell">
-                                        <rect key="frame" x="0.0" y="305.5" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="110" id="gc6-cu-E65" userLabel="PayPal Email Cell">
+                                        <rect key="frame" x="0.0" y="305.5" width="414" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gc6-cu-E65" id="GID-ii-jgj">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter PayPal email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U7h-5v-KsX">
-                                                    <rect key="frame" x="20" y="5" width="374" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-paypal-144" translatesAutoresizingMaskIntoConstraints="NO" id="Gi0-34-z1o">
+                                                    <rect key="frame" x="20" y="26" width="70" height="58"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Gi0-34-z1o" secondAttribute="height" multiplier="35:29" id="S48-iZ-HFv"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="hdX-i8-KZW"/>
+                                                        <constraint firstAttribute="width" constant="70" id="oMk-xD-9hJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter PayPal password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tDo-1Y-ieL">
+                                                    <rect key="frame" x="95" y="74" width="299" height="36"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6y-7w-xn7">
+                                                    <rect key="frame" x="95" y="0.0" width="299" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password Required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jH1-ym-gRZ">
+                                                    <rect key="frame" x="95" y="54" width="299" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter PayPal email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U7h-5v-KsX">
+                                                    <rect key="frame" x="95" y="20" width="299" height="34"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Gi0-34-z1o" firstAttribute="centerY" secondItem="GID-ii-jgj" secondAttribute="centerY" id="1gM-Qw-pD3"/>
+                                                <constraint firstAttribute="bottom" secondItem="tDo-1Y-ieL" secondAttribute="bottom" id="AxY-6C-oAB"/>
+                                                <constraint firstItem="jH1-ym-gRZ" firstAttribute="leading" secondItem="U7h-5v-KsX" secondAttribute="leading" id="CiK-Qo-C0D"/>
+                                                <constraint firstItem="y6y-7w-xn7" firstAttribute="leading" secondItem="U7h-5v-KsX" secondAttribute="leading" id="JeO-pX-gIH"/>
+                                                <constraint firstItem="jH1-ym-gRZ" firstAttribute="top" secondItem="U7h-5v-KsX" secondAttribute="bottom" id="Jv3-Od-Th1"/>
+                                                <constraint firstItem="Gi0-34-z1o" firstAttribute="leading" secondItem="GID-ii-jgj" secondAttribute="leadingMargin" id="Oes-1H-5LB"/>
+                                                <constraint firstItem="tDo-1Y-ieL" firstAttribute="top" secondItem="jH1-ym-gRZ" secondAttribute="bottom" id="SJi-GU-fTk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="U7h-5v-KsX" secondAttribute="trailing" id="Sug-o1-abk"/>
+                                                <constraint firstItem="U7h-5v-KsX" firstAttribute="top" secondItem="y6y-7w-xn7" secondAttribute="bottom" id="acX-ql-9p1"/>
+                                                <constraint firstItem="U7h-5v-KsX" firstAttribute="leading" secondItem="Gi0-34-z1o" secondAttribute="trailing" constant="5" id="cgz-EX-9Tg"/>
+                                                <constraint firstItem="jH1-ym-gRZ" firstAttribute="trailing" secondItem="U7h-5v-KsX" secondAttribute="trailing" id="i0F-21-oqo"/>
+                                                <constraint firstItem="y6y-7w-xn7" firstAttribute="top" secondItem="GID-ii-jgj" secondAttribute="top" id="m12-rX-MiX"/>
+                                                <constraint firstItem="U7h-5v-KsX" firstAttribute="trailing" secondItem="y6y-7w-xn7" secondAttribute="trailing" id="uT5-Nm-oYn"/>
+                                                <constraint firstItem="tDo-1Y-ieL" firstAttribute="trailing" secondItem="U7h-5v-KsX" secondAttribute="trailing" id="vso-R9-5hz"/>
+                                                <constraint firstItem="tDo-1Y-ieL" firstAttribute="leading" secondItem="Gi0-34-z1o" secondAttribute="trailing" constant="5" id="zNr-lL-AWt"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eyn-n6-Zok" userLabel="PayPal Password Cell">
-                                        <rect key="frame" x="0.0" y="349.5" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eyn-n6-Zok" userLabel="Not Used">
+                                        <rect key="frame" x="0.0" y="415.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eyn-n6-Zok" id="HvS-Jn-krw">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter PayPal password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tDo-1Y-ieL">
-                                                    <rect key="frame" x="20" y="5" width="374" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
-                                                </textField>
-                                            </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="74" id="Sh4-kt-Lvq" userLabel="Credit Card Number Cell">
-                                        <rect key="frame" x="0.0" y="393.5" width="414" height="74"/>
+                                        <rect key="frame" x="0.0" y="459.5" width="414" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sh4-kt-Lvq" id="JP7-nP-xcG">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
@@ -183,19 +216,29 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creditcard" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yam-3A-yY7">
                                                     <rect key="frame" x="20" y="10" width="70" height="54"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" secondItem="yam-3A-yY7" secondAttribute="height" multiplier="35:29" id="2SQ-yp-ujt"/>
                                                         <constraint firstAttribute="width" constant="70" id="hWo-yk-2Dh"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter credit card number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="E4M-1t-aL5">
-                                                    <rect key="frame" x="98" y="22" width="296" height="30.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter credit card number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="E4M-1t-aL5">
+                                                    <rect key="frame" x="98" y="20" width="296" height="34"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" enablesReturnKeyAutomatically="YES" smartQuotesType="no" textContentType="cc-number"/>
                                                 </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Card Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OW7-sW-Zke">
+                                                    <rect key="frame" x="98" y="0.5" width="296" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="E4M-1t-aL5" firstAttribute="leading" secondItem="yam-3A-yY7" secondAttribute="trailing" constant="8" id="MCM-w4-czK"/>
                                                 <constraint firstItem="E4M-1t-aL5" firstAttribute="centerY" secondItem="yam-3A-yY7" secondAttribute="centerY" id="NiM-0x-tcO"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="E4M-1t-aL5" secondAttribute="trailing" id="RqJ-cS-MYL"/>
+                                                <constraint firstItem="E4M-1t-aL5" firstAttribute="trailing" secondItem="OW7-sW-Zke" secondAttribute="trailing" id="UhF-cf-7XZ"/>
+                                                <constraint firstItem="E4M-1t-aL5" firstAttribute="top" secondItem="OW7-sW-Zke" secondAttribute="bottom" id="XOE-if-lu0"/>
+                                                <constraint firstItem="E4M-1t-aL5" firstAttribute="leading" secondItem="OW7-sW-Zke" secondAttribute="leading" id="aWM-6u-8Im"/>
                                                 <constraint firstItem="yam-3A-yY7" firstAttribute="top" secondItem="JP7-nP-xcG" secondAttribute="top" constant="8" id="iQf-2v-JRj"/>
                                                 <constraint firstAttribute="bottom" secondItem="yam-3A-yY7" secondAttribute="bottom" constant="8" id="ohT-iN-fki"/>
                                                 <constraint firstItem="yam-3A-yY7" firstAttribute="leading" secondItem="JP7-nP-xcG" secondAttribute="leading" constant="20" id="uAx-49-e9u"/>
@@ -203,86 +246,109 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Cvw-tO-CeI" userLabel="Labels for Valid Until and CVV">
-                                        <rect key="frame" x="0.0" y="467.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="28" id="Cvw-tO-CeI" userLabel="Labels for Valid Until and CVV">
+                                        <rect key="frame" x="0.0" y="533.5" width="414" height="28"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cvw-tO-CeI" id="8ot-dL-m3C">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="28"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valid until" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czI-rl-Ljc">
-                                                    <rect key="frame" x="20" y="5" width="75.5" height="38"/>
+                                                    <rect key="frame" x="20" y="0.0" width="75.5" height="28"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CVV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJN-R9-CBx">
-                                                    <rect key="frame" x="260.5" y="1" width="33.5" height="38"/>
+                                                    <rect key="frame" x="260.5" y="0.0" width="33.5" height="28"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="oJN-R9-CBx" firstAttribute="top" secondItem="8ot-dL-m3C" secondAttribute="top" constant="1" id="6mQ-BO-zr8"/>
+                                                <constraint firstItem="oJN-R9-CBx" firstAttribute="top" secondItem="8ot-dL-m3C" secondAttribute="top" id="6mQ-BO-zr8"/>
                                                 <constraint firstItem="czI-rl-Ljc" firstAttribute="leading" secondItem="8ot-dL-m3C" secondAttribute="leading" constant="20" id="9kh-QB-gEr"/>
                                                 <constraint firstAttribute="trailing" secondItem="oJN-R9-CBx" secondAttribute="trailing" constant="120" id="Kji-pM-g7e"/>
-                                                <constraint firstItem="czI-rl-Ljc" firstAttribute="top" secondItem="8ot-dL-m3C" secondAttribute="top" constant="5" id="eTI-E1-x0E"/>
-                                                <constraint firstAttribute="bottom" secondItem="oJN-R9-CBx" secondAttribute="bottom" constant="5" id="jLw-n1-BVs"/>
-                                                <constraint firstAttribute="bottom" secondItem="czI-rl-Ljc" secondAttribute="bottom" constant="1" id="xHC-5E-spR"/>
+                                                <constraint firstItem="czI-rl-Ljc" firstAttribute="top" secondItem="8ot-dL-m3C" secondAttribute="top" id="eTI-E1-x0E"/>
+                                                <constraint firstAttribute="bottom" secondItem="oJN-R9-CBx" secondAttribute="bottom" id="jLw-n1-BVs"/>
+                                                <constraint firstAttribute="bottom" secondItem="czI-rl-Ljc" secondAttribute="bottom" id="xHC-5E-spR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="43" id="c71-zv-owh" userLabel="Valid Until and CVV Cell">
-                                        <rect key="frame" x="0.0" y="511" width="414" height="43"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="58" id="c71-zv-owh" userLabel="Valid Until and CVV Cell">
+                                        <rect key="frame" x="0.0" y="561.5" width="414" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c71-zv-owh" id="R4w-bo-xMH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07/2024" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76S-c9-Eoc">
-                                                    <rect key="frame" x="20" y="12" width="75" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="StP-p8-8cr">
+                                                    <rect key="frame" x="255" y="24" width="100" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="GOO-w5-zy3"/>
+                                                        <constraint firstAttribute="height" constant="34" id="byv-L9-3Le"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Validity Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7er-gP-Ckl">
+                                                    <rect key="frame" x="20" y="0.0" width="132" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="StP-p8-8cr">
-                                                    <rect key="frame" x="258" y="4" width="97" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid CVV Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I2-pt-qIJ">
+                                                    <rect key="frame" x="255" y="0.0" width="150" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12/2020" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="LMc-JW-eGh">
+                                                    <rect key="frame" x="20" y="24" width="96" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="96" id="RZg-cg-7if"/>
+                                                        <constraint firstAttribute="height" constant="34" id="o4H-cw-SLE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="76S-c9-Eoc" firstAttribute="bottom" secondItem="R4w-bo-xMH" secondAttribute="bottomMargin" constant="1" id="7Yo-z7-2ju"/>
-                                                <constraint firstItem="76S-c9-Eoc" firstAttribute="leading" secondItem="R4w-bo-xMH" secondAttribute="leadingMargin" id="nmN-Vr-7Ha"/>
-                                                <constraint firstItem="76S-c9-Eoc" firstAttribute="top" secondItem="R4w-bo-xMH" secondAttribute="topMargin" constant="1" id="oRR-PH-pUf"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6I2-pt-qIJ" secondAttribute="trailing" constant="-11" id="8dX-A2-gxh"/>
+                                                <constraint firstItem="StP-p8-8cr" firstAttribute="centerY" secondItem="LMc-JW-eGh" secondAttribute="centerY" id="8mL-IQ-RkL"/>
+                                                <constraint firstAttribute="trailing" secondItem="StP-p8-8cr" secondAttribute="trailing" constant="59" id="H6w-Wr-ffz"/>
+                                                <constraint firstItem="7er-gP-Ckl" firstAttribute="top" secondItem="R4w-bo-xMH" secondAttribute="top" id="IRj-td-LWl"/>
+                                                <constraint firstItem="LMc-JW-eGh" firstAttribute="leading" secondItem="R4w-bo-xMH" secondAttribute="leading" constant="20" id="SU9-A6-kxL"/>
+                                                <constraint firstAttribute="bottom" secondItem="LMc-JW-eGh" secondAttribute="bottom" id="SV5-uj-9uM"/>
+                                                <constraint firstItem="6I2-pt-qIJ" firstAttribute="leading" secondItem="StP-p8-8cr" secondAttribute="leading" id="dHg-Sg-Fy8"/>
+                                                <constraint firstAttribute="bottom" secondItem="StP-p8-8cr" secondAttribute="bottom" id="eUc-3R-JXK"/>
+                                                <constraint firstItem="6I2-pt-qIJ" firstAttribute="top" secondItem="R4w-bo-xMH" secondAttribute="top" id="g0I-BR-kz6"/>
+                                                <constraint firstItem="7er-gP-Ckl" firstAttribute="baseline" secondItem="6I2-pt-qIJ" secondAttribute="baseline" id="hvi-zB-yoJ"/>
+                                                <constraint firstItem="StP-p8-8cr" firstAttribute="top" secondItem="6I2-pt-qIJ" secondAttribute="bottom" id="pVd-vF-e7T"/>
+                                                <constraint firstItem="7er-gP-Ckl" firstAttribute="leading" secondItem="LMc-JW-eGh" secondAttribute="leading" id="uN8-5k-FV0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="216" id="c48-Be-fgR" userLabel="Date Picker Cell">
-                                        <rect key="frame" x="0.0" y="554" width="414" height="216"/>
+                                        <rect key="frame" x="0.0" y="619.5" width="414" height="216"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c48-Be-fgR" id="4wH-Pc-8Lf">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="N4Q-00-gth">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="216"/>
-                                                </datePicker>
+                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1aE-Ji-UzC" customClass="MonthYearPickerView" customModule="TakeMyMoney" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                </pickerView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="N4Q-00-gth" firstAttribute="leading" secondItem="4wH-Pc-8Lf" secondAttribute="leading" constant="20" id="CyF-Gh-3Lb"/>
-                                                <constraint firstItem="N4Q-00-gth" firstAttribute="top" secondItem="4wH-Pc-8Lf" secondAttribute="top" id="PPF-Zx-QiF"/>
-                                                <constraint firstAttribute="trailing" secondItem="N4Q-00-gth" secondAttribute="trailing" constant="20" id="wfo-bJ-n0s"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="93E-rH-VVk" userLabel="Static Card Holder Label">
-                                        <rect key="frame" x="0.0" y="770" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="835.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="93E-rH-VVk" id="tdm-p5-lw3">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -299,30 +365,36 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XT8-J3-eNa" userLabel="Card Holder Cell">
-                                        <rect key="frame" x="0.0" y="814" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="XT8-J3-eNa" userLabel="Card Holder Cell">
+                                        <rect key="frame" x="0.0" y="879.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XT8-J3-eNa" id="DXY-Mi-lzL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invalid Card Holder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zq-9F-cze">
+                                                    <rect key="frame" x="20" y="0.0" width="139.5" height="19"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-CP-Cyf">
-                                                    <rect key="frame" x="20" y="5" width="374" height="34"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <rect key="frame" x="20" y="18" width="374" height="37"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="zlk-CP-Cyf" secondAttribute="bottom" constant="5" id="42u-BQ-v5l"/>
                                                 <constraint firstAttribute="trailing" secondItem="zlk-CP-Cyf" secondAttribute="trailing" constant="20" id="HJA-Ok-4fk"/>
                                                 <constraint firstItem="zlk-CP-Cyf" firstAttribute="leading" secondItem="DXY-Mi-lzL" secondAttribute="leading" constant="20" id="a5J-iT-eWy"/>
-                                                <constraint firstItem="zlk-CP-Cyf" firstAttribute="top" secondItem="DXY-Mi-lzL" secondAttribute="top" constant="5" id="lcC-7N-ll4"/>
+                                                <constraint firstAttribute="bottom" secondItem="zlk-CP-Cyf" secondAttribute="bottom" constant="5" id="dFO-jX-cl2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ii9-eR-cQs" userLabel="Save card data cell">
-                                        <rect key="frame" x="0.0" y="858" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="939.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ii9-eR-cQs" id="5w7-Ad-Lhj">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -353,11 +425,11 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KhJ-g9-etw" userLabel="Proceed Button">
-                                        <rect key="frame" x="0.0" y="902" width="414" height="102"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="82" id="KhJ-g9-etw" userLabel="Proceed Button">
+                                        <rect key="frame" x="0.0" y="983.5" width="414" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KhJ-g9-etw" id="Oci-mh-Wop">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="102"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guk-aJ-czj" customClass="RoundedButton" customModule="TakeMyMoney" customModuleProvider="target">
@@ -396,14 +468,23 @@
                     <navigationItem key="navigationItem" title="Payment data" id="o2A-F5-BWu"/>
                     <connections>
                         <outlet property="cardHolderText" destination="zlk-CP-Cyf" id="3tO-dn-SD3"/>
-                        <outlet property="creditCardNumberText" destination="E4M-1t-aL5" id="CIe-oU-3rX"/>
+                        <outlet property="cardNumberText" destination="E4M-1t-aL5" id="CIe-oU-3rX"/>
+                        <outlet property="creditCardLogo" destination="yam-3A-yY7" id="1SF-db-nRn"/>
                         <outlet property="cvvText" destination="StP-p8-8cr" id="fae-aC-1LY"/>
+                        <outlet property="invalidCVVNumberLabel" destination="6I2-pt-qIJ" id="Qyp-bM-xJL"/>
+                        <outlet property="invalidCardHolderLabel" destination="1Zq-9F-cze" id="YUm-0Y-mzX"/>
+                        <outlet property="invalidCardNumberLabel" destination="OW7-sW-Zke" id="3ez-gS-Mqz"/>
+                        <outlet property="invalidPayPalEmailLabel" destination="y6y-7w-xn7" id="elP-yP-jYA"/>
+                        <outlet property="invalidValidityDateLabel" destination="7er-gP-Ckl" id="ynp-au-rW0"/>
+                        <outlet property="missingPayPalPasswordLabel" destination="jH1-ym-gRZ" id="6Pb-Fb-C8C"/>
                         <outlet property="paymentMethodControl" destination="eBN-DI-M2f" id="YCT-gn-fOf"/>
                         <outlet property="paymentTypeLabel" destination="sI3-9h-Fx5" id="WSl-9K-d4K"/>
                         <outlet property="paypalEmailText" destination="U7h-5v-KsX" id="okO-cZ-wMk"/>
                         <outlet property="paypalPasswordText" destination="tDo-1Y-ieL" id="We8-Gr-Qxh"/>
-                        <outlet property="validUntilDatePicker" destination="N4Q-00-gth" id="0p8-fK-Vqz"/>
-                        <outlet property="validUntilLabel" destination="76S-c9-Eoc" id="XxR-TF-Gud"/>
+                        <outlet property="proceedButton" destination="guk-aJ-czj" id="fCF-dT-ZnP"/>
+                        <outlet property="saveCardDataSwitch" destination="oec-Jv-AZo" id="eLv-Zw-pgc"/>
+                        <outlet property="validUntilMonthYearPicker" destination="1aE-Ji-UzC" id="TBz-zV-BCX"/>
+                        <outlet property="validUntilText" destination="LMc-JW-eGh" id="YHo-zi-seL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OjC-tg-RL9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -635,5 +716,6 @@
     <resources>
         <image name="PromoCard" width="964" height="626"/>
         <image name="creditcard" catalog="system" width="128" height="91"/>
+        <image name="icons8-paypal-144" width="144" height="144"/>
     </resources>
 </document>
