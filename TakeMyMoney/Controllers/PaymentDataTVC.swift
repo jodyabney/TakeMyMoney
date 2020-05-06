@@ -12,6 +12,9 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
     
     //MARK: - Properties
     
+    var paypalInfo: PayPal?
+    var creditCardInfo: CreditCard?
+    
     var isEditingValidUntilDate: Bool = false {
         didSet {
             tableView.beginUpdates()
@@ -39,6 +42,7 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
                 cardNumberText.resignFirstResponder()
                 saveCardData = false
                 saveCardDataSwitch.isOn = false
+                cardLogo = nil
                 disableProceedButton()
             case .creditCard:
                 // reset the PayPal data and fields
@@ -63,6 +67,7 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
     //PayPal entries
     var paypalEmail: String?
     var paypalPassword: String?
+    let paypalLogo = "icons8-paypal-144.png"
     
     // Credit Card rows
     let creditcardNumberIndexPath = IndexPath(row: 7, section: 0)
@@ -74,7 +79,6 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
     let saveCardDataIndexPath = IndexPath(row: 13, section: 0)
     
     // Credit Card entries
-    var creditCard: CreditCard?
     var cardType: CreditCardType?
     var cardNumber: String? {
         didSet {
@@ -90,6 +94,7 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
     var cvv: String?
     var cardHolder: String?
     var saveCardData: Bool = false
+    var cardLogo: String?
     
     
     //MARK: - IBOutlets
@@ -163,16 +168,12 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
         // ensure the proceed button is disabled initially
         disableProceedButton()
         
-        // Register the view controller as observer of UITextField.textDidChangeNotification to use for determining if the Proceed button should be enabled
-        NotificationCenter.default.addObserver(self, selector: #selector(validEntriesForPaymentMethod(_:)), name: UITextField.textDidChangeNotification, object: nil)
-
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        // Register the view controller as observer of UITextField.textDidChangeNotification
+        // to use for determining if the Proceed button should be enabled
+        NotificationCenter.default.addObserver(self, selector: #selector(validEntriesForPaymentMethod(_:)),
+                                               name: UITextField.textDidChangeNotification, object: nil)
     }
+    
     
     // MARK: - Notification Handling
 
@@ -225,20 +226,26 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
         
         switch cardNumber.first {
         case "4": // Visa cards start with a 4
-            creditCardLogo.image = UIImage(named: "icons8-visa-144.png")
             cardType = .visa
+            cardLogo = CreditCardLogo.visa.rawValue
+            creditCardLogo.image = UIImage(named: cardLogo!)
         case "3": // AMEX cards start with a 3
-            creditCardLogo.image = UIImage(named: "icons8-american-express-144.png")
             cardType = .amex
+            cardLogo = CreditCardLogo.amex.rawValue
+            creditCardLogo.image = UIImage(named: cardLogo!)
         case "5": // Mastercards cards start with a 5
-            creditCardLogo.image = UIImage(named: "icons8-mastercard-logo-144.png")
             cardType = .mastercard
+            cardLogo = CreditCardLogo.mastercard.rawValue
+            creditCardLogo.image = UIImage(named: cardLogo!)
         case "6": // Discover cards start with a 6
-            creditCardLogo.image = UIImage(named: "icons8-discover-144.png")
             cardType = .discover
+            cardLogo = CreditCardLogo.discover.rawValue
+            creditCardLogo.image = UIImage(named: cardLogo!)
         default: // consider all other starting numbers to be invalid
-            creditCardLogo.image = UIImage(systemName: "creditcard")
             cardType = .invalid
+            cardLogo = "creditcard"
+            creditCardLogo.image = UIImage(systemName: cardLogo!)
+            
         }
     }
     
@@ -247,7 +254,7 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
     func validPayPalEmail() -> Bool {
         do {
             let _ = try Email(paypalEmailText.text!)
-            paypalEmail = paypalPasswordText.text!
+            paypalEmail = paypalEmailText.text!
             return true
         } catch {
             paypalEmail = nil
@@ -371,21 +378,8 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func proceedButtonTapped(_ sender: UIButton) {
-            
-            print("selectedPaymentMethod: \(selectedPaymentMethod)")
-            
-            if selectedPaymentMethod == .payPal {
-                print("paypalEmail: \(paypalEmail!)")
-                print("paypalPassword: \(paypalPassword!)")
-            } else {
-                print("cardNumber: \(cardNumber!)")
-                print("validUntil: \(validUntil!)")
-                print("cvv: \(cvv!)")
-                print("cardHolder: \(cardHolder!)")
-                print("saveCardData: \(saveCardData)")
-                print("maskedCardNumber:\(maskedCardNumber!)")
-            }
         }
+
     
     
     //MARK: - TableView Delegate Methods
@@ -428,12 +422,6 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
         }
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if indexPath == validUntilAndCVVIndexPath {
-//            isEditingValidUntilDate = !isEditingValidUntilDate
-//        }
-//    }
-    
     
     //MARK: - TextField Delegate Methods
     
@@ -454,7 +442,6 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
         }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
         switch selectedPaymentMethod {
         // perform checks on PayPal fields
         case .payPal:
@@ -509,6 +496,8 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
                     // hide the error label
                     invalidCardNumberLabel.isHidden = true
                 }
+                cvvText.text = nil
+                cvv = nil
                 
             case validUntilText:
                 if !validCardValidUntil() {
@@ -581,7 +570,6 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
         }
     }
     
-    
     private func allowOnlyDigits(string: String) -> Bool {
         if CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: string)) {
             // If incoming character is a decimalDigit, return true
@@ -603,15 +591,28 @@ class PaymentDataTVC: UITableViewController, UITextFieldDelegate {
     }
     
     
+    // MARK: - Navigation
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PaymentConfirmation" {
+            let destinationVC = segue.destination as? PaymentConfirmationTVC
+            destinationVC?.selectedPaymentMethod = selectedPaymentMethod
+            switch selectedPaymentMethod {
+            case .payPal:
+                paypalInfo = PayPal(email: paypalEmail!, password: paypalPassword!)
+                destinationVC?.paypalInfo = paypalInfo
+            case .creditCard:
+                creditCardInfo = CreditCard(type: cardType!,
+                                            number: cardNumber!,
+                                            validUntil: validUntil!,
+                                            cvv: cvv!,
+                                            holder: cardHolder!,
+                                            logo: cardLogo!,
+                                            maskedNumber: maskedCardNumber!)
+                destinationVC?.creditCardInfo = creditCardInfo
+            }
+        }
+    }
     
 }

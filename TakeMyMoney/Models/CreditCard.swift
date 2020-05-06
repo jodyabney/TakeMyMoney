@@ -44,5 +44,7 @@ struct CreditCard {
     var validUntil: String
     var cvv: String
     var holder: String
+    var logo: String
+    var maskedNumber: String
     
 }

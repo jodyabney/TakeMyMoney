@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B1192196245DF6A300BD15AE /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1192195245DF6A300BD15AE /* CreditCard.swift */; };
-		B189569E245CE6C3003E1BBF /* PaymentConfirmationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189569D245CE6C3003E1BBF /* PaymentConfirmationTVC.swift */; };
+		B12052642462D68200ABDFDD /* PaymentConfirmationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12052632462D68200ABDFDD /* PaymentConfirmationTVC.swift */; };
 		B18956A3245D016C003E1BBF /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18956A2245D016C003E1BBF /* RoundedButton.swift */; };
 		B18FAEA9245AE57700193D5E /* PaymentDataTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18FAEA8245AE57700193D5E /* PaymentDataTVC.swift */; };
 		B18FAEAD245BA41D00193D5E /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18FAEAC245BA41C00193D5E /* PaymentMethod.swift */; };
@@ -25,11 +25,12 @@
 		B1BF6AB8245E586300AE3E0C /* CardHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF6AB7245E586300AE3E0C /* CardHolder.swift */; };
 		B1BF6ABA245E689300AE3E0C /* CardCVV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF6AB9245E689300AE3E0C /* CardCVV.swift */; };
 		B1BF6ABC245E6D2500AE3E0C /* CardNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BF6ABB245E6D2500AE3E0C /* CardNumber.swift */; };
+		B1D32367246258C9007B60DA /* PayPal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D32366246258C9007B60DA /* PayPal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B1192195245DF6A300BD15AE /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
-		B189569D245CE6C3003E1BBF /* PaymentConfirmationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentConfirmationTVC.swift; sourceTree = "<group>"; };
+		B12052632462D68200ABDFDD /* PaymentConfirmationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentConfirmationTVC.swift; sourceTree = "<group>"; };
 		B18956A2245D016C003E1BBF /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		B18FAEA8245AE57700193D5E /* PaymentDataTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDataTVC.swift; sourceTree = "<group>"; };
 		B18FAEAC245BA41C00193D5E /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 		B1BF6AB7245E586300AE3E0C /* CardHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHolder.swift; sourceTree = "<group>"; };
 		B1BF6AB9245E689300AE3E0C /* CardCVV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCVV.swift; sourceTree = "<group>"; };
 		B1BF6ABB245E6D2500AE3E0C /* CardNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNumber.swift; sourceTree = "<group>"; };
+		B1D32366246258C9007B60DA /* PayPal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +77,8 @@
 		B18FAEAA245AE57E00193D5E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B189569D245CE6C3003E1BBF /* PaymentConfirmationTVC.swift */,
 				B18FAEA8245AE57700193D5E /* PaymentDataTVC.swift */,
+				B12052632462D68200ABDFDD /* PaymentConfirmationTVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				B18FAEAC245BA41C00193D5E /* PaymentMethod.swift */,
+				B1D32366246258C9007B60DA /* PayPal.swift */,
 				B1192195245DF6A300BD15AE /* CreditCard.swift */,
 				B1BF6AB1245E520600AE3E0C /* Email.swift */,
 				B1BF6AB5245E578500AE3E0C /* Password.swift */,
@@ -207,7 +210,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1906533245FADDF00041405 /* MonthYearPickerView.swift in Sources */,
-				B189569E245CE6C3003E1BBF /* PaymentConfirmationTVC.swift in Sources */,
 				B18956A3245D016C003E1BBF /* RoundedButton.swift in Sources */,
 				B1192196245DF6A300BD15AE /* CreditCard.swift in Sources */,
 				B1B11B40245A5EF100DFAEF2 /* AppDelegate.swift in Sources */,
@@ -218,8 +220,10 @@
 				B18FAEA9245AE57700193D5E /* PaymentDataTVC.swift in Sources */,
 				B1906557245FB6CE00041405 /* CardValidUntil.swift in Sources */,
 				B1BF6AB8245E586300AE3E0C /* CardHolder.swift in Sources */,
+				B12052642462D68200ABDFDD /* PaymentConfirmationTVC.swift in Sources */,
 				B1BF6AB2245E520600AE3E0C /* Email.swift in Sources */,
 				B1BF6AB6245E578500AE3E0C /* Password.swift in Sources */,
+				B1D32367246258C9007B60DA /* PayPal.swift in Sources */,
 				B1B11B42245A5EF100DFAEF2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
